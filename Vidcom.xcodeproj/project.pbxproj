@@ -1,0 +1,593 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		37FB7FB82AF9261300B6A5A7 /* VidcomApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FB7FB72AF9261300B6A5A7 /* VidcomApp.swift */; };
+		37FB7FBA2AF9261300B6A5A7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FB7FB92AF9261300B6A5A7 /* ContentView.swift */; };
+		37FB7FBC2AF9261500B6A5A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37FB7FBB2AF9261500B6A5A7 /* Assets.xcassets */; };
+		37FB7FBF2AF9261500B6A5A7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37FB7FBE2AF9261500B6A5A7 /* Preview Assets.xcassets */; };
+		37FB7FC92AF9261600B6A5A7 /* VidcomTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FB7FC82AF9261600B6A5A7 /* VidcomTests.swift */; };
+		37FB7FD32AF9261600B6A5A7 /* VidcomUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FB7FD22AF9261600B6A5A7 /* VidcomUITests.swift */; };
+		37FB7FD52AF9261600B6A5A7 /* VidcomUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FB7FD42AF9261600B6A5A7 /* VidcomUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		37FB7FC52AF9261600B6A5A7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 37FB7FAC2AF9261300B6A5A7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 37FB7FB32AF9261300B6A5A7;
+			remoteInfo = Vidcom;
+		};
+		37FB7FCF2AF9261600B6A5A7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 37FB7FAC2AF9261300B6A5A7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 37FB7FB32AF9261300B6A5A7;
+			remoteInfo = Vidcom;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		37FB7FB42AF9261300B6A5A7 /* Vidcom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vidcom.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		37FB7FB72AF9261300B6A5A7 /* VidcomApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VidcomApp.swift; sourceTree = "<group>"; };
+		37FB7FB92AF9261300B6A5A7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		37FB7FBB2AF9261500B6A5A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		37FB7FBE2AF9261500B6A5A7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		37FB7FC42AF9261600B6A5A7 /* VidcomTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VidcomTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		37FB7FC82AF9261600B6A5A7 /* VidcomTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VidcomTests.swift; sourceTree = "<group>"; };
+		37FB7FCE2AF9261600B6A5A7 /* VidcomUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VidcomUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		37FB7FD22AF9261600B6A5A7 /* VidcomUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VidcomUITests.swift; sourceTree = "<group>"; };
+		37FB7FD42AF9261600B6A5A7 /* VidcomUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VidcomUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		37FB7FB12AF9261300B6A5A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37FB7FC12AF9261600B6A5A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37FB7FCB2AF9261600B6A5A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		37FB7FAB2AF9261300B6A5A7 = {
+			isa = PBXGroup;
+			children = (
+				37FB7FB62AF9261300B6A5A7 /* Vidcom */,
+				37FB7FC72AF9261600B6A5A7 /* VidcomTests */,
+				37FB7FD12AF9261600B6A5A7 /* VidcomUITests */,
+				37FB7FB52AF9261300B6A5A7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		37FB7FB52AF9261300B6A5A7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				37FB7FB42AF9261300B6A5A7 /* Vidcom.app */,
+				37FB7FC42AF9261600B6A5A7 /* VidcomTests.xctest */,
+				37FB7FCE2AF9261600B6A5A7 /* VidcomUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		37FB7FB62AF9261300B6A5A7 /* Vidcom */ = {
+			isa = PBXGroup;
+			children = (
+				37FB7FB72AF9261300B6A5A7 /* VidcomApp.swift */,
+				37FB7FB92AF9261300B6A5A7 /* ContentView.swift */,
+				37FB7FBB2AF9261500B6A5A7 /* Assets.xcassets */,
+				37FB7FBD2AF9261500B6A5A7 /* Preview Content */,
+			);
+			path = Vidcom;
+			sourceTree = "<group>";
+		};
+		37FB7FBD2AF9261500B6A5A7 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				37FB7FBE2AF9261500B6A5A7 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		37FB7FC72AF9261600B6A5A7 /* VidcomTests */ = {
+			isa = PBXGroup;
+			children = (
+				37FB7FC82AF9261600B6A5A7 /* VidcomTests.swift */,
+			);
+			path = VidcomTests;
+			sourceTree = "<group>";
+		};
+		37FB7FD12AF9261600B6A5A7 /* VidcomUITests */ = {
+			isa = PBXGroup;
+			children = (
+				37FB7FD22AF9261600B6A5A7 /* VidcomUITests.swift */,
+				37FB7FD42AF9261600B6A5A7 /* VidcomUITestsLaunchTests.swift */,
+			);
+			path = VidcomUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		37FB7FB32AF9261300B6A5A7 /* Vidcom */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 37FB7FD82AF9261600B6A5A7 /* Build configuration list for PBXNativeTarget "Vidcom" */;
+			buildPhases = (
+				37FB7FB02AF9261300B6A5A7 /* Sources */,
+				37FB7FB12AF9261300B6A5A7 /* Frameworks */,
+				37FB7FB22AF9261300B6A5A7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Vidcom;
+			productName = Vidcom;
+			productReference = 37FB7FB42AF9261300B6A5A7 /* Vidcom.app */;
+			productType = "com.apple.product-type.application";
+		};
+		37FB7FC32AF9261600B6A5A7 /* VidcomTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 37FB7FDB2AF9261600B6A5A7 /* Build configuration list for PBXNativeTarget "VidcomTests" */;
+			buildPhases = (
+				37FB7FC02AF9261600B6A5A7 /* Sources */,
+				37FB7FC12AF9261600B6A5A7 /* Frameworks */,
+				37FB7FC22AF9261600B6A5A7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				37FB7FC62AF9261600B6A5A7 /* PBXTargetDependency */,
+			);
+			name = VidcomTests;
+			productName = VidcomTests;
+			productReference = 37FB7FC42AF9261600B6A5A7 /* VidcomTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		37FB7FCD2AF9261600B6A5A7 /* VidcomUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 37FB7FDE2AF9261600B6A5A7 /* Build configuration list for PBXNativeTarget "VidcomUITests" */;
+			buildPhases = (
+				37FB7FCA2AF9261600B6A5A7 /* Sources */,
+				37FB7FCB2AF9261600B6A5A7 /* Frameworks */,
+				37FB7FCC2AF9261600B6A5A7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				37FB7FD02AF9261600B6A5A7 /* PBXTargetDependency */,
+			);
+			name = VidcomUITests;
+			productName = VidcomUITests;
+			productReference = 37FB7FCE2AF9261600B6A5A7 /* VidcomUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		37FB7FAC2AF9261300B6A5A7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					37FB7FB32AF9261300B6A5A7 = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
+					37FB7FC32AF9261600B6A5A7 = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = 37FB7FB32AF9261300B6A5A7;
+					};
+					37FB7FCD2AF9261600B6A5A7 = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = 37FB7FB32AF9261300B6A5A7;
+					};
+				};
+			};
+			buildConfigurationList = 37FB7FAF2AF9261300B6A5A7 /* Build configuration list for PBXProject "Vidcom" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 37FB7FAB2AF9261300B6A5A7;
+			productRefGroup = 37FB7FB52AF9261300B6A5A7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				37FB7FB32AF9261300B6A5A7 /* Vidcom */,
+				37FB7FC32AF9261600B6A5A7 /* VidcomTests */,
+				37FB7FCD2AF9261600B6A5A7 /* VidcomUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		37FB7FB22AF9261300B6A5A7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37FB7FBF2AF9261500B6A5A7 /* Preview Assets.xcassets in Resources */,
+				37FB7FBC2AF9261500B6A5A7 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37FB7FC22AF9261600B6A5A7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37FB7FCC2AF9261600B6A5A7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		37FB7FB02AF9261300B6A5A7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37FB7FBA2AF9261300B6A5A7 /* ContentView.swift in Sources */,
+				37FB7FB82AF9261300B6A5A7 /* VidcomApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37FB7FC02AF9261600B6A5A7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37FB7FC92AF9261600B6A5A7 /* VidcomTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37FB7FCA2AF9261600B6A5A7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37FB7FD52AF9261600B6A5A7 /* VidcomUITestsLaunchTests.swift in Sources */,
+				37FB7FD32AF9261600B6A5A7 /* VidcomUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		37FB7FC62AF9261600B6A5A7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 37FB7FB32AF9261300B6A5A7 /* Vidcom */;
+			targetProxy = 37FB7FC52AF9261600B6A5A7 /* PBXContainerItemProxy */;
+		};
+		37FB7FD02AF9261600B6A5A7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 37FB7FB32AF9261300B6A5A7 /* Vidcom */;
+			targetProxy = 37FB7FCF2AF9261600B6A5A7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		37FB7FD62AF9261600B6A5A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		37FB7FD72AF9261600B6A5A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		37FB7FD92AF9261600B6A5A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Vidcom/Preview Content\"";
+				DEVELOPMENT_TEAM = 8LF378D5NB;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Tymcal.Vidcom;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		37FB7FDA2AF9261600B6A5A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Vidcom/Preview Content\"";
+				DEVELOPMENT_TEAM = 8LF378D5NB;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Tymcal.Vidcom;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		37FB7FDC2AF9261600B6A5A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8LF378D5NB;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Tymcal.VidcomTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Vidcom.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Vidcom";
+			};
+			name = Debug;
+		};
+		37FB7FDD2AF9261600B6A5A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8LF378D5NB;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Tymcal.VidcomTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Vidcom.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Vidcom";
+			};
+			name = Release;
+		};
+		37FB7FDF2AF9261600B6A5A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8LF378D5NB;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Tymcal.VidcomUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Vidcom;
+			};
+			name = Debug;
+		};
+		37FB7FE02AF9261600B6A5A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8LF378D5NB;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Tymcal.VidcomUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Vidcom;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		37FB7FAF2AF9261300B6A5A7 /* Build configuration list for PBXProject "Vidcom" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37FB7FD62AF9261600B6A5A7 /* Debug */,
+				37FB7FD72AF9261600B6A5A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		37FB7FD82AF9261600B6A5A7 /* Build configuration list for PBXNativeTarget "Vidcom" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37FB7FD92AF9261600B6A5A7 /* Debug */,
+				37FB7FDA2AF9261600B6A5A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		37FB7FDB2AF9261600B6A5A7 /* Build configuration list for PBXNativeTarget "VidcomTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37FB7FDC2AF9261600B6A5A7 /* Debug */,
+				37FB7FDD2AF9261600B6A5A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		37FB7FDE2AF9261600B6A5A7 /* Build configuration list for PBXNativeTarget "VidcomUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37FB7FDF2AF9261600B6A5A7 /* Debug */,
+				37FB7FE02AF9261600B6A5A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 37FB7FAC2AF9261300B6A5A7 /* Project object */;
+}
