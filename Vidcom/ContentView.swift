@@ -94,24 +94,22 @@ struct ContentView: View {
                 }
                 .padding()
                 
-                switch loadState {
-                case .unknown:
-                    EmptyView()
-                case .loading:
-                    ProgressView()
-                case .loaded:
-                    List(videoURLs, id: \.self) { videoURL in
-                        NavigationLink("Done") {
-                            VideoPlayer(player: AVPlayer(url: videoURL))
-                                .frame(width: 300)
-                                //.allowsHitTesting(false)
+                List(videoURLs, id: \.self) { videoURL in
+                        switch loadState {
+                        case .unknown:
+                            EmptyView()
+                        case .loading:
+                            ProgressView()
+                        case .loaded:
+                            NavigationLink("Done") {
+                                VideoPlayer(player: AVPlayer(url: videoURL))
+                                    .frame(width: 300)
+                                    //.allowsHitTesting(false)
+                            }
+                        case .failed:
+                            Text("Import failed")
                         }
                     }
-                    
-                case .failed:
-                    Text("Import failed")
-                }
-                
                 }
             VStack {
                 Spacer()
