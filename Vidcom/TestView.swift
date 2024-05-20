@@ -30,9 +30,9 @@ extension ContentView {
         
         for videoURL in videoURLs {
             dispatchGroup.enter()
-            var asset = AVAsset(url: videoURL)
-            var tracks = try await asset.loadTracks(withMediaType: .video)[0]
-            var audioTracks = try await asset.loadTracks(withMediaType: .audio)[0]
+            let asset = AVAsset(url: videoURL)
+            let tracks = try await asset.loadTracks(withMediaType: .video)[0]
+            let audioTracks = try await asset.loadTracks(withMediaType: .audio)[0]
             let duration = try await asset.load(.duration)
             count += 1
             print(count)

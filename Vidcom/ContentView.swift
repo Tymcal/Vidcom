@@ -29,7 +29,10 @@ struct Video: Transferable {
     }
 }
 
-struct VidData {
+struct VidData: Identifiable {
+    var id: Int
+    var thumbnail: UIImage
+    var url: URL
     var duration: Double
     var time: String
     var location: String
@@ -40,8 +43,15 @@ struct ContentView: View {
         case unknown, loading, loaded, failed
     }
     
+    enum AllLoadState {
+        case unknown, loading, loaded, failed
+    }
+    
     @State var videoURLs: [URL] = []
     
+    @State var id: Int = 0
+    @State private var count: Int = 0
+    @State var frame: UIImage = UIImage(named: "kbv")!
     @State var duration: Double = 0.00000
     @State var time: String = ""
     @State var location = ""
@@ -50,13 +60,12 @@ struct ContentView: View {
         
     @State private var selectedItems: [PhotosPickerItem] = []
     @State private var loadState = LoadState.unknown
+    @State private var allLoadState = AllLoadState.unknown
     @State private var mergedVideoURL: URL?
-    
-    @State private var showAlert = false
-    @State private var userInput: Int = 0
+    @State private var withDate: Bool = false
  
     private var combinedText: String {
-        vidDatas.map { "\(secondToTimestamp(seconds: $0.duration)) - \(convertTo12HourFormat($0.time) ?? "") - \($0.location)" }
+        vidDatas.map { "\(secondToTimestamp(seconds: $0.duration)) \($0.time) \($0.location)" }
                       .joined(separator: "\n")
         }
                 
@@ -64,73 +73,103 @@ struct ContentView: View {
         ZStack {
             NavigationStack {
                 HStack {
-                    PhotosPicker("Upload", selection: $selectedItems, matching: .videos)
-                    Spacer()
-                    Button("Copy") {
-                        showAlert = true
-                    }
-                    .fontWeight(.bold)
-                    .alert("Cut to Black", isPresented: $showAlert) {
-                        TextField("After video number...", value: $userInput, formatter: NumberFormatter())
-                        HStack {
-                            Button("OK") {
-                                // Handle the OK button action
-                                print("Videos after video  \(userInput) is added by 1 second")
-                                
-                                if userInput != 0 {
-                                    for i in userInput...(vidDatas.count - 1) {
-                                        vidDatas[i].duration += 1
-                                    }
-                                }
-                                
-                                // Perform the copy all action
-                                UIPasteboard.general.string = combinedText
-                            }
-                            Button("Cancel", role: .cancel) {
-                            }
+                    if selectedItems != [] {
+                        Button("Reset") {
+                            selectedItems = []
+                            vidDatas = []
+                            loadState = .unknown
+                            allLoadState = .unknown
+                            count = 0
+                            duration = 0.0000
+                            time = ""
+                            location = ""
+                            cum = []
                         }
+                    } else {
+                        PhotosPicker("Upload", selection: $selectedItems, matching: .videos)
                     }
                     
+                    Spacer()
+                    if allLoadState == .loading {
+                        Text("\(count) Uploaded")
+                    }
+                    Spacer()
+                    
+                    Toggle("Date", isOn: $withDate)
+                                .toggleStyle(.button)
                 }
                 .padding()
+                Spacer()
                 
-                List(videoURLs, id: \.self) { videoURL in
-                        switch loadState {
-                        case .unknown:
-                            EmptyView()
-                        case .loading:
-                            ProgressView()
-                        case .loaded:
-                            NavigationLink("Done") {
-                                VideoPlayer(player: AVPlayer(url: videoURL))
-                                    .frame(width: 300)
-                                    //.allowsHitTesting(false)
+                if allLoadState == .loaded {
+                    List(vidDatas) { vidData in
+                        ZStack {
+                            Image(uiImage: vidData.thumbnail)
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                            
+                            LinearGradient(
+                                gradient: Gradient(colors: [Color(hue: 0, saturation: 0, brightness: 0, opacity: 0.90), .clear]),
+                                       startPoint: .bottom,
+                                       endPoint: .top
+                                   )
+
+                            VStack {
+                                Spacer()
+                                
+                                HStack(alignment: .bottom) {
+                                    
+                                    if withDate {
+                                        VStack(alignment: .leading) {
+                                            Text("\(vidData.duration)")
+                                            Text("\(vidData.time)")
+                                                .opacity(0.5)
+                                        }
+                                    } else {
+                                        Text("\(vidData.duration)")
+                                        Text("\(vidData.time)")
+                                            .opacity(0.5)
+                                    }
+                                    
+                                    Spacer()
+                                    if vidData.id != vidDatas.count {
+                                        Button("Split") {
+                                            print("Videos after video  \(vidData.id) is added by 1 second")
+                                            
+                                            for i in vidData.id...(vidDatas.count - 1) {
+                                                vidDatas[i].duration += 1
+                                            }
+                                            
+                                            // Perform the copy all action
+                                            UIPasteboard.general.string = combinedText
+                                        }
+                                        .frame(width: 80, height: 30)
+                                        .background(.white)
+                                        .cornerRadius(20)
+                                        .foregroundColor(.blue)
+                                        .fontWeight(.medium)
+                                    }
+                                }
                             }
-                        case .failed:
-                            Text("Import failed")
+                            .padding(20)
                         }
+                        .listRowBackground(Color.clear)
+                        .listRowSeparator(.hidden)
                     }
+                    .buttonStyle(BorderlessButtonStyle())
                 }
+            }
+            
             VStack {
                 Spacer()
                 Button("Make timestamps list") {
-                    cum = []
-                    //Cumulative addition sequence
-                    var current: Double = 0.00000
                     
-                    for vidData in vidDatas {
-                        cum.append(current)
-                        current += vidData.duration
+                    //sort by time
+                    vidDatas.sort {
+                        $0.time < $1.time
                     }
-    //                print(cum)
-                    
-                    //replace each cumulative (timestamp) to duration array
-                    var i = 0
-                    for timestamp in cum {
-                        vidDatas[i].duration = timestamp
-                        i += 1
-                    }
-//                    print(vidDatas)
+                    makeTimestampsList()
+                    UIPasteboard.general.string = combinedText
                 }
                 .frame(width: 300, height: 50)
                 .background(.blue)
@@ -148,6 +187,8 @@ struct ContentView: View {
                 //------------------------------------------------------------------------------
                 
                 Task {
+                    allLoadState = .loading
+                    UIApplication.shared.isIdleTimerDisabled = true
                     for item in selectedItems {
                         do {
                             loadState = .loading
@@ -157,6 +198,7 @@ struct ContentView: View {
                                 self.videoURLs.append(video.url)
                                 Task {
                                     try await loadData(video.url)
+                                    count += 1
                                 }
                             } else {
                                 loadState = .failed
@@ -165,6 +207,7 @@ struct ContentView: View {
                             loadState = .failed
                         }
                     }
+                    allLoadState = .loaded
                 }
             }
     }
@@ -175,11 +218,36 @@ struct ContentView: View {
         
         // A CMTime value and an array of AVMetadataItem.
         
-        //------------------------------------------------------------------------------
-        // Load video's duration
-        //------------------------------------------------------------------------------
-        
         Task {
+            
+            id += 1
+            
+            //------------------------------------------------------------------------------
+            // Load video's first frame
+            //------------------------------------------------------------------------------
+            
+            // Create an AVAssetImageGenerator
+                let imageGenerator = AVAssetImageGenerator(asset: asset)
+                imageGenerator.appliesPreferredTrackTransform = true // Adjust for video orientation
+
+                // Define the time for the first frame (0 seconds)
+            let frameTime = CMTimeMake(value: 0, timescale: 1)
+                
+                do {
+                    // Generate the CGImage for the first frame
+                    let cgImage = try imageGenerator.copyCGImage(at: frameTime, actualTime: nil)
+                    
+                    // Convert the CGImage to a UIImage
+                    frame = UIImage(cgImage: cgImage)
+                } catch {
+                    print("Error generating thumbnail: \(error.localizedDescription)")
+                }
+            
+            //------------------------------------------------------------------------------
+            // Load video's duration
+            //------------------------------------------------------------------------------
+            
+            
             let durationData = try await asset.load(.duration)
             
             // Determine the loaded status of the duration property.
@@ -212,7 +280,12 @@ struct ContentView: View {
                                                          filteredByIdentifier: .commonIdentifierCreationDate)
             
             guard let item = try await timeData.first?.load(.value) else { return }
-            time = timestamp(from: String(item as! Substring))!
+            
+            if withDate {
+                time = timestampWithDate(String(item as! Substring))!
+            } else {
+                time = timestamp(String(item as! Substring))!
+            }
             print(time)
             
             //------------------------------------------------------------------------------
@@ -226,14 +299,14 @@ struct ContentView: View {
             guard let item = try await locationData.first?.load(.value) else { return }
             print(coordinate(String(item as! Substring)))
 
-            vidDatas.append(VidData(duration: duration, time: time, location: location))
+            vidDatas.append(VidData(id: id, thumbnail: frame, url: videoURL, duration: duration, time: time, location: location))
 //            print(dur)
         }
     }
     
     // The rest are function
     
-    func timestamp(from input: String) -> String? {
+    func timestamp(_ input: String) -> String? {
         let pattern = "\\d{2}:\\d{2}:\\d{2}"
         
         do {
@@ -246,6 +319,34 @@ struct ContentView: View {
             }
         } catch {
             print("Error creating regex: \(error)")
+        }
+        
+        return nil
+    }
+
+    func timestampWithDate(_ input: String) -> String? {
+        let pattern = #"(\d{4})-(\d{2})-(\d{2})T(\d{2}:\d{2}:\d{2})[+-]\d{4}"#
+        
+        do {
+            let regex = try NSRegularExpression(pattern: pattern)
+            if let match = regex.firstMatch(in: input, range: NSRange(input.startIndex..., in: input)) {
+                if let yearRange = Range(match.range(at: 1), in: input),
+                   let monthRange = Range(match.range(at: 2), in: input),
+                   let dayRange = Range(match.range(at: 3), in: input),
+                   let timeRange = Range(match.range(at: 4), in: input) {
+                    
+                    let year = String(input[yearRange])
+                    let month = String(input[monthRange])
+                    let day = String(input[dayRange])
+                    let time = String(input[timeRange])
+                    
+                    // Construct the new date format
+                    let transformedDate = "\(year.suffix(2))\(month)\(day) \(time)"
+                    return transformedDate
+                }
+            }
+        } catch {
+            print("Invalid regex pattern")
         }
         
         return nil
@@ -294,6 +395,25 @@ struct ContentView: View {
         }
 
         return nil // Return nil if the conversion fails
+    }
+    
+    func makeTimestampsList() {
+        cum = []
+        //Cumulative addition sequence
+        var current: Double = 0.00000
+        
+        for vidData in vidDatas {
+            cum.append(current)
+            current += vidData.duration
+        }
+    //                print(cum)
+        
+        //replace each cumulative (timestamp) to duration array
+        var i = 0
+        for timestamp in cum {
+            vidDatas[i].duration = timestamp
+            i += 1
+        }
     }
 }
 

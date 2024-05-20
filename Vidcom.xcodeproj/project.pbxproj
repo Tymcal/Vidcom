@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		371357E82AFE329800B5AC2A /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 371357E72AFE329800B5AC2A /* Photos.framework */; };
 		371357EA2AFE32D800B5AC2A /* PhotosUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 371357E92AFE32D800B5AC2A /* PhotosUI.framework */; };
+		37E209392BF8FC93004E8D99 /* kbv.png in Resources */ = {isa = PBXBuildFile; fileRef = 37E209382BF8FC92004E8D99 /* kbv.png */; };
 		37FB7FB82AF9261300B6A5A7 /* VidcomApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FB7FB72AF9261300B6A5A7 /* VidcomApp.swift */; };
 		37FB7FBA2AF9261300B6A5A7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FB7FB92AF9261300B6A5A7 /* ContentView.swift */; };
 		37FB7FBC2AF9261500B6A5A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37FB7FBB2AF9261500B6A5A7 /* Assets.xcassets */; };
@@ -39,6 +40,7 @@
 /* Begin PBXFileReference section */
 		371357E72AFE329800B5AC2A /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
 		371357E92AFE32D800B5AC2A /* PhotosUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PhotosUI.framework; path = System/Library/Frameworks/PhotosUI.framework; sourceTree = SDKROOT; };
+		37E209382BF8FC92004E8D99 /* kbv.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kbv.png; sourceTree = "<group>"; };
 		37FB7FB42AF9261300B6A5A7 /* Vidcom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vidcom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37FB7FB72AF9261300B6A5A7 /* VidcomApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VidcomApp.swift; sourceTree = "<group>"; };
 		37FB7FB92AF9261300B6A5A7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				37FB7FB72AF9261300B6A5A7 /* VidcomApp.swift */,
 				37FB7FB92AF9261300B6A5A7 /* ContentView.swift */,
 				37FB7FE12AF92E7900B6A5A7 /* TestView.swift */,
+				37E209382BF8FC92004E8D99 /* kbv.png */,
 				37FB7FBB2AF9261500B6A5A7 /* Assets.xcassets */,
 				37FB7FBD2AF9261500B6A5A7 /* Preview Content */,
 			);
@@ -250,6 +253,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37E209392BF8FC93004E8D99 /* kbv.png in Resources */,
 				37FB7FBF2AF9261500B6A5A7 /* Preview Assets.xcassets in Resources */,
 				37FB7FBC2AF9261500B6A5A7 /* Assets.xcassets in Resources */,
 			);
